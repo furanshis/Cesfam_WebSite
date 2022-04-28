@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+body{
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    background-image: url("../img/formulario.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin:0;
+}
+
+.form-register{
+    width: 95%;
+    max-width: 500px;
+    background-color: rgba(185, 178, 178, 0.5);
+    padding: 20px;
+    resize: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 102%;
+}
+.form__title{
+    margin-top: 0;
+    font-size:  4.0em;
+    text-align: center;
+    color: rgb(34, 31, 31);
+
+}
+.from__label , .form__input{
+    display: block;
+    color: rgb(34, 31, 31);
+    
+}
+.form__label{
+    width: 30%;
+}
+.form__input{
+    width: 70%
+}
+.container--flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: rgb(34, 31, 31);
+}
+h1{
+    text-transform: uppercase;
+    color: rgb(34, 31, 31);
+
+}
+#textintro{
+    resize: none;
+    color: rgb(34, 31, 31);
+
+}
+h2{
+    color: rgb(34, 31, 31);
+    font-size:  2.0em;
+}
