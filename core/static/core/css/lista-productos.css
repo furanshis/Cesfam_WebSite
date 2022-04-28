@@ -1,0 +1,38 @@
+
+/* barra menu*/
+.navbar{
+    background-image: url('../img/img1.jpg');
+    background-color: transparent !important;
+}
+.navbar .nav-item a{
+    color: #FFF !important;
+}
+
+.navbar .navbar-nav{
+    margin:0 auto;
+    
+}
+
+.navbar .dropdown-menu{
+        background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+/* fondo*/ 
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+
+
+ 

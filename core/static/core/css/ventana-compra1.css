@@ -1,0 +1,27 @@
+/* menú, nabbar, cabecera */
+
+.navbar{
+    background-image: url('../img/img1.jpg');
+    background-color: transparent !important;
+}
+.navbar .nav-item a{
+    color: #FFF !important;
+}
+
+.navbar .navbar-nav{
+    margin:0 auto;
+    
+}
+
+.navbar .dropdown-menu{
+        background-color: rgba(0, 0, 0, 0.3);
+
+}
+/*------------------------*/
+.card-container{
+    margin: 1em;
+    padding: 1em;
+    color: blue;
+    float: right;
+}
+
