@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ /* menú, nabbar, cabecera */
+
+ .navbar{
+    background-image: url('../img/img1.jpg');
+    background-color: transparent !important;
+}
+.navbar .nav-item a{
+    color: #FFF !important;
+}
+
+.navbar .navbar-nav{
+    margin:0 auto;
+    
+}
+
+.navbar .dropdown-menu{
+        background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+.background{
+    background-image: url("../img/venus.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+     
+}
+.nav{
+    width: 350px;
+    height: auto;
+    background-color:rgba(0,0,0,0);
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-size: cover;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    height: 90px;
+    margin: 5px 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    line-height: 90px;
+    text-align: center;
+    transition: 300ms;
+}
+
+
+a.active , .nav a:hover{
+    background-color: whitesmoke;
+    color: white;
+    width: 100%;
+}
+.a{
+    width: 95%;
+
+}
+.b{
+    width: 85%;
+
+}
+.c{
+    width: 80%;
+}
+.d{
+    width: 90%;
+}
+.contenido{
+    position: absolute;
+    width: 930px;
+    min-height: 500px;
+    height: auto;
+    right: 0;
+    top: 10%;
+}
+.inicio{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.home h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    padding-right: 90px;
+    border-bottom: 1px solid white;
+}
+#h1{
+    text-transform: uppercase;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    font-size: 48px;
+    padding: 50px 0;
+}
