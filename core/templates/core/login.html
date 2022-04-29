@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html >
 <head>
@@ -5,13 +6,13 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>login | Gc </title>
     
-    <link rel="stylesheet" href="css/login.css">
-    <script defer src="js/Form.js"></script>
+    <link rel="stylesheet" href="{% static 'core/css/login.css' %}">
+    <script defer src="{% static 'core/js/Form.js' %}"></script>
 
 </head>
 <body>
    <div class="login-box">
-       <img  class="avatar"  src="img/logo.png" width="48px" alt="logo de Gc">
+       <img  class="avatar"  src="{% static 'core/img/logo.png' %}" width="48px" alt="logo de Gc">
        <h1>Ingresar</h1>
        <!--username-->
        <form id="user-form" class="form"> 
@@ -26,7 +27,7 @@
           <input type="password" placeholder="Ingrese contraseña">
           <small class="error-text">Introduce una contraseña de +6 caracteres</small>
         </div>
-          <a href="index.html"><button type="button" id="button">Login</button></a>
+          <a href="{% url 'index' %}"><button type="button" id="button">Login</button></a>
           <br>
           
          
