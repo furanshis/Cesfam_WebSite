@@ -33,6 +33,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}" >Iniciar Sesion</a>
+                  <!--los href dejarlos como el de arriba, que tiene la llave {} y los porcentajes %% ejemlo-->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../Semestral-Proyecto/formulario.html">Subir Obra</a>
@@ -116,7 +117,8 @@
               <!--tarjeta #1-->
               <article class="col-4 card-effect">
                 <div class="card">
-                  <img src="./img/imgcard1.jpg" alt="Raiting" class="card-img card-img-filter">
+                  <img src="./img/imgcard1.jpg%"  alt="Raiting" class="card-img card-img-filter"> 
+                  <!--img src="{% static './core/img/imgcard1.jpg' %}"  alt="Raiting" class="card-img card-img-filter"--> 
                   <div class="card-img-overlay text-white d-flex flex-column justify-content-center text-center">
                     <h4>Rafting</h4>
                     <p>
