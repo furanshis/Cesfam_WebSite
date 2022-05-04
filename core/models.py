@@ -18,3 +18,11 @@ class Producto(models.Model):
 
     def __str__(self):
         return f'{self.nombreProducto} -> {self.precioProducto}'
+
+class Remedio(models.Model):
+    idRemedio = models.IntegerField(primary_key=True,verbose_name="Id del remedio")
+    nombreRemedio = models.CharField(max_lenght=50, verbose_name="Nombre del remedio")
+    descripcionRemedio = models.CharField(max_lenght=120, verbose_name="Descripción del remedio")
+
+class CategoriaRemedio(models.Model):
+    idCategoriaRemedio = models.IntegerField()
