@@ -10,40 +10,40 @@ class Carrito:
         else:
             self.carrito = carrito
 
-    def agregar(self, producto):
-        id = str(producto.idProducto)
+    def agregar(self, remedio):
+        id = str(remedio.idRemedio)
         
         if id not in self.carrito.keys():
             self.carrito[id] = {
-                "producto_id" : producto.idProducto,
-                "nombre_carrito" : producto.nombreProducto,
-                "precio_producto": producto.precioProducto,
-                "precio_acumulado" : producto.precioProducto,
-                "descripcion_producto" : producto.descripcionProducto,
+                "producto_id" : remedio.idRemedio,
+                "nombre_carrito" : remedio.nombreRemedio,
+                "precio_producto": remedio.precioProducto,
+                "precio_acumulado" : remedio.precioRemedio,
+                "descripcion_producto" : remedio.descripcionRemedio,
                 "cantidad" : 1,
             }
         else:
             self.carrito[id]["cantidad"] += 1
-            self.carrito[id]["precio_acumulado"] += producto.precioProducto
+            self.carrito[id]["precio_acumulado"] += remedio.precioRemedio
         self.guardar_carrito()
 
     def guardar_carrito(self):
         self.session["carrito"] = self.carrito
         self.session.modified = True
 
-    def eliminar(self,producto):
-        id = str(producto.idProducto)
+    def eliminar(self,remedio):
+        id = str(remedio.idRemedio)
         if id in self.carrito:
             del self.carrito[id]
             self.guardar_carrito()
 
-    def restar(self, producto):
-        id = str(producto.idProducto)
+    def restar(self, remedio):
+        id = str(remedio.idRemedio)
         if id in self.carrito.keys():
             self.carrito[id]["cantidad"] -= 1
-            self.carrito[id]["precio_acumulado"] -= producto.precioProducto
+            self.carrito[id]["precio_acumulado"] -= remedio.precioRemedio
             if self.carrito[id]["cantidad"] == 0:
-                self.eliminar(producto)
+                self.eliminar(remedio)
             
             self.guardar_carrito()
 
