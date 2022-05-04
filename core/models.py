@@ -19,10 +19,19 @@ class Producto(models.Model):
     def __str__(self):
         return f'{self.nombreProducto} -> {self.precioProducto}'
 
-class Remedio(models.Model):
-    idRemedio = models.IntegerField(primary_key=True,verbose_name="Id del remedio")
-    nombreRemedio = models.CharField(max_lenght=50, verbose_name="Nombre del remedio")
-    descripcionRemedio = models.CharField(max_lenght=120, verbose_name="Descripción del remedio")
 
 class CategoriaRemedio(models.Model):
-    idCategoriaRemedio = models.IntegerField()
+    idCategoriaRemedio = models.IntegerField(primary_key=True, verbose_name="Id de la categoria del remedio")
+    nombreCategoriaRemedio = models.CharField(max_length=50, verbose_name="Nombre de la categoría del producto")
+
+    def __str__(self):
+        return self.nombreCategoriaRemedio
+
+class Remedio(models.Model):
+    idRemedio = models.IntegerField(primary_key=True,verbose_name="Id del remedio")
+    nombreRemedio = models.CharField(max_length=50, verbose_name="Nombre del remedio")
+    descripcionRemedio = models.CharField(max_length=120, verbose_name="Descripción del remedio")
+    categoriaRemedio = models.ForeignKey(CategoriaRemedio, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombreRemedio
