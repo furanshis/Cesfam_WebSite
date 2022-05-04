@@ -28,10 +28,12 @@ class CategoriaRemedio(models.Model):
         return self.nombreCategoriaRemedio
 
 class Remedio(models.Model):
+    objects = None
     idRemedio = models.IntegerField(primary_key=True,verbose_name="Id del remedio")
     nombreRemedio = models.CharField(max_length=50, verbose_name="Nombre del remedio")
     descripcionRemedio = models.CharField(max_length=120, verbose_name="Descripción del remedio")
     categoriaRemedio = models.ForeignKey(CategoriaRemedio, on_delete=models.CASCADE)
+    precioRemedio = models.IntegerField(verbose_name="Precio del remedio")
 
     def __str__(self):
-        return self.nombreRemedio
+        return f'{self.nombreRemedio} -> {self.precioRemedio}'
