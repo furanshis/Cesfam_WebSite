@@ -67,14 +67,14 @@
                     <div class="row" style="padding: 10px 0;">
                         <div class="col-12">
                             <div class="row">
-                                {% for producto in productos %}
+                                {% for remedio in remedios %}
                                 <div class="col-6">
-                                    <div class="card" style="height: 13rem; width: 23rem; margin: 5px 0px">
+                                    <div class="card" style="height: 18rem; width: 23rem; margin: 5px 0px">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{producto.nombreProducto}}</h5>
-                                            <p class="card-text">{{producto.descripcionProducto}}</p>
-                                            <p class="card-text">{{producto.precioProducto}}</p>
-                                            <a href="{% url 'agregar_producto' producto.idProducto %}" class="btn btn-primary">agregar al carrito</a>
+                                            <h5 class="card-title">{{remedio.nombreRemedio}}</h5>
+                                            <p class="card-text">{{remedio.descripcionRemedio}}</p>
+                                            <p class="card-text">{{remedio.precioRemedio}}$</p>
+                                            <a href="{% url 'agregar_remedio' remedio.idRemedio %}" class="btn btn-primary">agregar al carrito</a>
                                         </div>
                                     </div>
                                 </div>

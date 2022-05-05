@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(Producto)
 admin.site.register(Remedio)
 admin.site.register(CategoriaRemedio)
+admin.site.register(MarcaRemedio)

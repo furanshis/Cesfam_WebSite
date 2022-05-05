@@ -16,24 +16,24 @@ def carrito_compras(request):
     return render(request, 'core/carrito_compras.html', {"remedios": remedios})
 
 
-def agregar_remedio(request, producto_id):
+def agregar_remedio(request, remedio_id):
     carrito = Carrito(request)
-    producto = Remedio.objects.get(idProducto=producto_id)
-    carrito.agregar(producto)
+    remedio = Remedio.objects.get(idRemedio=remedio_id)
+    carrito.agregar(remedio)
     return redirect("carrito_compras")
 
 
-def eliminar_remedio(request, producto_id):
+def eliminar_remedio(request, remedio_id):
     carrito = Carrito(request)
-    producto = Remedio.objects.get(idProducto=producto_id)
-    carrito.eliminar(producto)
+    remedio = Remedio.objects.get(idRemedio=remedio_id)
+    carrito.eliminar(remedio)
     return redirect("carrito_compras")
 
 
-def restar_remedio(request, producto_id):
+def restar_remedio(request, remedio_id):
     carrito = Carrito(request)
-    producto = Remedio.objects.get(idProducto=producto_id)
-    carrito.restar(producto)
+    remedio = Remedio.objects.get(idRemedio=remedio_id)
+    carrito.restar(remedio)
     return redirect("carrito_compras")
 
 

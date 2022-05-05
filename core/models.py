@@ -27,13 +27,24 @@ class CategoriaRemedio(models.Model):
     def __str__(self):
         return self.nombreCategoriaRemedio
 
+class MarcaRemedio(models.Model):
+    idMarcaRemedio = models.IntegerField(primary_key=True, verbose_name="Marca del remedio")
+    nombreMarcaRemedio = models.CharField(max_length=50, verbose_name="Nombre de la marca del remedio")
+
+    def __str__(self):
+        return self.nombreMarcaRemedio
+
 class Remedio(models.Model):
     objects = None
     idRemedio = models.IntegerField(primary_key=True,verbose_name="Id del remedio")
     nombreRemedio = models.CharField(max_length=50, verbose_name="Nombre del remedio")
-    descripcionRemedio = models.CharField(max_length=120, verbose_name="Descripción del remedio")
+    marcaRemedio = models.ForeignKey(MarcaRemedio, on_delete=models.CASCADE)
+    descripcionRemedio = models.CharField(max_length=300, verbose_name="Descripción del remedio")
     categoriaRemedio = models.ForeignKey(CategoriaRemedio, on_delete=models.CASCADE)
     precioRemedio = models.IntegerField(verbose_name="Precio del remedio")
+    stockRemedio = models.IntegerField(verbose_name="Stock del remedio")
+    cantidadRemedio = models.CharField(max_length=15 ,verbose_name="Cantidad de remedio en gr o mg")
 
     def __str__(self):
         return f'{self.nombreRemedio} -> {self.precioRemedio}'
+

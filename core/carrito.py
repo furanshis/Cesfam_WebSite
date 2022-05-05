@@ -15,12 +15,12 @@ class Carrito:
         
         if id not in self.carrito.keys():
             self.carrito[id] = {
-                "producto_id" : remedio.idRemedio,
+                "remedio_id" : remedio.idRemedio,
                 "nombre_carrito" : remedio.nombreRemedio,
-                "precio_producto": remedio.precioProducto,
+                "precio_remedio": remedio.precioRemedio,
                 "precio_acumulado" : remedio.precioRemedio,
-                "descripcion_producto" : remedio.descripcionRemedio,
-                "cantidad" : 1,
+                "descripcion_remedio" : remedio.descripcionRemedio,
+                "cantidad" : remedio.stockRemedio,
             }
         else:
             self.carrito[id]["cantidad"] += 1
