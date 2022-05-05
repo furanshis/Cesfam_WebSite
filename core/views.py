@@ -10,8 +10,13 @@ def index(request):
 def login(request):
     return render(request, 'core/login.html')
 
+<<<<<<< HEAD
 def nosotros(request):
     return render(request, 'core/nosotros.html')
+=======
+def contacto(request):
+    return render(request, 'core/contacto.html')
+>>>>>>> c1cde83a969869c720283ba7ec3034828f3d93e9
 
 #carrito compras
 def carrito_compras(request):
