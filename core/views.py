@@ -10,6 +10,9 @@ def index(request):
 def login(request):
     return render(request, 'core/login.html')
 
+def contacto(request):
+    return render(request, 'core/contacto.html')
+
 #carrito compras
 def carrito_compras(request):
     remedios = Remedio.objects.all()
