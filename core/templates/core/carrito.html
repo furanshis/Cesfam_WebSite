@@ -23,7 +23,7 @@
             </td>
         </tr>
 
-        <script src="https://www.paypal.com/sdk/js?client-id=AbKU_1yrMR8nHrWmdVToHA4oOn9Fgju5-BQtRVUmC0Fs6P4txVx68cFgW2Y6Qd_E6jqb-pP0NrXjy0vB&currency=USD"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AT-EWWozseJtU18PfRKEC1PBB4ikdw5PSAojVtNupALMC9bz3WiLnMX0S4WY5-MRqBqEenZD9RCLvQIS&currency=USD"></script>
  <div id="paypal-button-container"></div>
 
  <script>
@@ -55,6 +55,8 @@
       onApprove: (data, actions) => {
 
         return actions.order.capture().then(function(orderData) {
+
+            console.log()
 
           // Successful capture! For dev/demo purposes:
 
