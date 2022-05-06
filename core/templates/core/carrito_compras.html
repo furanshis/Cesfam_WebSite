@@ -71,7 +71,7 @@
                                 <div class="col-6">
                                     <div class="card" style="height: 18rem; width: 23rem; margin: 5px 0px">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{remedio.nombreRemedio}}</h5>
+                                            <h5 class="card-title">{{remedio.nombreRemedio}} {{remedio.cantidadRemedio}}</h5>
                                             <p class="card-text">{{remedio.descripcionRemedio}}</p>
                                             <p class="card-text">{{remedio.precioRemedio}}$</p>
                                             <a href="{% url 'agregar_remedio' remedio.idRemedio %}" class="btn btn-primary">agregar al carrito</a>
