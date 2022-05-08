@@ -6,6 +6,7 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('nosotros/', nosotros, name='nosotros'),
 
+
     #carrito
     path('carrito', carrito_compras, name="carrito_compras"),
     path('agregar/<int:remedio_id>/', agregar_remedio, name="agregar_remedio"),

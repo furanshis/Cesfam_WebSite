@@ -44,6 +44,7 @@ class Remedio(models.Model):
     precioRemedio = models.IntegerField(verbose_name="Precio del remedio")
     stockRemedio = models.IntegerField(verbose_name="Stock del remedio")
     cantidadRemedio = models.CharField(max_length=15 ,verbose_name="Cantidad de remedio en gr o mg")
+    imagenRemedio = models.ImageField(verbose_name="Imagen del remedio")
 
     def __str__(self):
         return f'{self.nombreRemedio} -> {self.precioRemedio}'
