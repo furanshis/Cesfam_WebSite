@@ -13,47 +13,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet"></head>
-<body>
-    <!--Cabecera, navbar-->
-    <div class="mynav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand"><img src="{% static 'core/img/asd.jpg'%}" class="img-fluif" width="80px" height="50px" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'carrito_compras' %}">Farmacia</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'login' %}" >Iniciar Sesion</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Productos
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
-                    <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
-                    <li><a class="dropdown-item" href="artista.html">Por artista</a></li>
-                  </ul>
+    <body>
+      <!--Cabecera, navbar-->
+      <body>
+        <!--Cabecera, navbar-->
+        <div class="mynav">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand"><img src="{% static 'core/img/asd.jpg'%}" class="img-fluif" width="80px" height="50px"
+                  alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
                   </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'carrito_compras' %}">Farmacia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+                    <!--los href dejarlos como el de arriba, que tiene la llave {} y los porcentajes %% ejemlo-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
+                      <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
+                      <li><a class="dropdown-item" href="artista.html">Por artista</a></li>
+                    </ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
 
       <hr style="opacity: 0;">
 
