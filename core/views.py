@@ -10,6 +10,9 @@ def index(request):
 def login(request):
     return render(request, 'core/login.html')
 
+def contacto(request):
+    return render(request, 'core/contacto.html')
+
 def nosotros(request):
     return render(request, 'core/nosotros.html')
 
