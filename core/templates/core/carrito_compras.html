@@ -3,102 +3,118 @@
 
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-  
+
 {% bootstrap_messages %}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet"></head>
-    <body>
-      <!--Cabecera, navbar-->
-      <body>
-        <!--Cabecera, navbar-->
-        <div class="mynav">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand"><img src="{% static 'core/img/asd.jpg'%}" class="img-fluif" width="80px" height="50px"
-                  alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'carrito_compras' %}">Farmacia</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
-                    <!--los href dejarlos como el de arriba, que tiene la llave {} y los porcentajes %% ejemlo-->
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
-                      <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
-                      <li><a class="dropdown-item" href="artista.html">Por artista</a></li>
-                    </ul>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                  </li>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <!--Cabecera, navbar-->
+
+  <body>
+    <!--Cabecera, navbar-->
+    <div class="mynav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="{% static 'core/img/asd.jpg'%}" class="img-fluif" width="80px" height="50px"
+              alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'carrito_compras' %}">Farmacia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+                <!--los href dejarlos como el de arriba, que tiene la llave {} y los porcentajes %% ejemlo-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
+                  <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
+                  <li><a class="dropdown-item" href="artista.html">Por artista</a></li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
         </div>
+      </nav>
+    </div>
 
-      <hr style="opacity: 0;">
+    <hr style="opacity: 0;">
 
-      <div class="container">
-          <div class="row">
-              <div class="col-12 align-self-center">
-                  <h1 class="display">Bienvenido a la farmacia online</h1>
-              </div>
-            <div class="row">
-                <div class="col-8">
-                    <div class="row" style="padding: 10px 0;">
-                        <div class="col-12">
-                            <div class="row">
-                                {% for remedio in remedios %}
-                                <div class="col-6">
-                                    <div class="card" style="height: 18rem; width: 23rem; margin: 5px 0px">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{remedio.nombreRemedio}}</h5>
-                                            <p class="card-text">{{remedio.descripcionRemedio}}</p>
-                                            <p class="card-text">{{remedio.precioRemedio}}$</p>
-                                            <a href="{% url 'agregar_remedio' remedio.idRemedio %}" class="btn btn-primary">agregar al carrito</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 align-self-center">
+          <h1 class="display">Bienvenido a la farmacia online</h1>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="row" style="padding: 10px 0;">
+              <div class="col-12">
+                <div class="row">
+                  {% for remedio in remedios %}
+                  <div class="col-6">
+                    <div class="card" style="height: 18rem; width: 23rem; margin: 5px 0px">
+                      <div class="card-body">
+
+
+
+                        <h5 class="card-title">{{remedio.nombreRemedio}}</h5>
+
+
+
+
+
+
+
+                        <p class="card-text">{{remedio.descripcionRemedio}}</p>
+                        <p class="card-text">{{remedio.precioRemedio}}$</p>
+                        <a href="{% url 'agregar_remedio' remedio.idRemedio %}" class="btn btn-primary">agregar al
+                          carrito</a>
+                      </div>
                     </div>
+                  </div>
+                  {% endfor %}
                 </div>
-                
-                <div class="col-4">
-                    {% include 'core/carrito.html' %}
-                </div>
+              </div>
             </div>
           </div>
+
+          <div class="col-4">
+            {% include 'core/carrito.html' %}
+          </div>
+        </div>
       </div>
+    </div>
 
 
 
@@ -111,7 +127,8 @@
 
 
 
-      
 
-</body>
+
+  </body>
+
 </html>

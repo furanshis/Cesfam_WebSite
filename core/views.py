@@ -13,6 +13,10 @@ def login(request):
 def nosotros(request):
     return render(request, 'core/nosotros.html')
 
+def probando(request):
+    return render(request, 'core/probando.html')
+   
+
 #carrito compras
 def carrito_compras(request):
     remedios = Remedio.objects.all()

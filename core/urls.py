@@ -5,6 +5,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('login/', login, name='login'),
     path('nosotros/', nosotros, name='nosotros'),
+    path('probando/', probando, name='probando'),
 
     #carrito
     path('carrito', carrito_compras, name="carrito_compras"),
