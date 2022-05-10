@@ -1,37 +1,154 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GC|Contactanos</title>
-    <link rel="stylesheet" href="css/contacto.css">
+
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cesfam | entrega de medicamentos</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!--ESTILOS CSS-->
+  <link href="{% static 'core/css/estilos.css' %}" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GC|Contactanos</title>
+  <link rel="stylesheet" href="css/contacto.css">
+
 </head>
 
 <body>
+  <!--Cabecera, navbar-->
+  <div class="mynav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"><img src="{% static 'core/img/asd.jpg'%}" class="img-fluif" width="80px" height="50px"
+            alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'carrito_compras' %}">Farmacia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+              <!--los href dejarlos como el de arriba, que tiene la llave {} y los porcentajes %% ejemlo-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
+                <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
+                <li><a class="dropdown-item" href="artista.html">Por artista</a></li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-    <form action="">
-        <h2>CONTACTANOS</h2>
-        <u>Datos Personales</u>
-        <input type="text" placeholder="Nombre y Apellido">
-        <input type="text" placeholder="Correo">
-        <input type="text" placeholder="Telefono">
-        <textarea name="mensaje"  placeholder="Escribe aqui . . ."></textarea>
-        
-        <a href="index.html"> <input type="button" value="ENVIAR" id="boton"></a>
-       
-        
+  <!--formulario de contacto  -->
 
+  <div class="card p-3">
+    <div class="flex-column">
+      <h1>Contacto</h1>
+      <!-- <p>Antes de contactarnos por favor considere:</p>
+                <ol>
+                    <li>SoloTodo no es una tienda, es un comparador de precios, así que <strong> no vendemos
+                            productos.</strong></li>
+                    <li>Las tiendas que catalogamos solo operan en su respectivo país y <strong>no hacen envíos al
+                            extranjero.</strong></li>
+                    <li>El formulario de contacto <strong>no es una línea de ayuda o de asesoría personal en las
+                            compras</strong>, puede usar el sistema de comentarios del sitio para dejar dudas y
+                        consultas.</li> -->
+      </ol>
+      <form>
+        <div class="form-group"><label for="contactNameInput">Su nombre (requerido)</label><input type="text"
+            class="form-control" id="contactNameInput" name="contactName" required="" value=""></div>
+        <div class="form-group"><label for="contactEmailInput">Su e-mail (requerido)</label><input type="email"
+            class="form-control" id="contactEmailInput" name="contactEmail" required="" value=""></div>
+        <div class="form-group"><label for="contactSubjectInput">Asunto (requerido)</label><input type="text"
+            class="form-control" id="contactSubjectInput" name="contactSubject" required="" value=""></div>
+        <div class="form-group"><label for="contactMessageInput">Su mensaje (requerido)</label><textarea
+            class="form-control" id="contactMessageInput" rows="3" name="contactMessage" required=""></textarea></div>
+        <button type="submit" class="btn btn-primary">Enviar</button><br><br><br>
+        <br><br><br>
 
-    </form>    
-
-    <div id="viacontacto">   
-        <p>Dirección : Los Copihues #289 </p>
-        <p>Fono : 300 290 1000 </p>
-        <p>Instagram : @Group_Zero </p>
-        
+      </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <!--mapa  -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.915874993557!2d-71.49672142182922!3d-33.032346735650655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689debc1f81f17d%3A0x4401b442b47937b5!2sCentro%20de%20Salud%20Familiar%20Doctor%20JC%20Baeza!5e0!3m2!1ses-419!2scl!4v1652174046585!5m2!1ses-419!2scl"
+      width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    
+  </div>
+
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container-fluid mt-3" id="solotodo-footer">
+      <div class="row pb-4">
+        <div class="col-12 col-md-4">
+          <h3 class="page-header">Corporación Municipal Viña del Mar</h3>
+          <div class="row">
+            <div class="col-4 logo-container"><a
+                href="http://www.lun.com/Pages/NewsDetail.aspx?dt=2010-08-19&amp;PaginaId=18&amp;bodyid=0"
+                target="_blank" rel="noopener nofollow"><img src="{% static 'core/img/futher.png'%}" alt="lun"></a>
+            </div>
+            <div class="col-8">"Ofrece el llamativo servicio de regatear y encontrar el precio más
+              conveniente
+              de notebooks"</div>
+          </div>
+          <p><a class="font-weight-bold" href="/tos">Términos y condiciones</a></p>
+        </div>
+        <div class="col-12 col-md-5">
+          <h3 class="page-header">Ministerio de salud</h3>
+          <div class="row">
+            <div class="col-4 logo-container"><a
+                href="http://www.lun.com/Pages/NewsDetail.aspx?dt=2010-08-19&amp;PaginaId=18&amp;bodyid=0"
+                target="_blank" rel="noopener nofollow"><img src="{% static 'core/img/gobernovich.png'%}" alt="lun"></a>
+            </div>
+            <div class="col-8">"Ofrece el llamativo servicio de regatear y encontrar el precio más
+              conveniente
+              de notebooks"</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <h3 class="page-header">Encuentranos en</h3>
+          <address>Avda. Tamarugal 350 - El Olivar<br>Viña del mar - Chile<br></address>Teléfono: 32 2272445<br><a
+            class="font-weight-bold" rel="noopener nofollow" href="/contacto"> <br>Mas informacion</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>

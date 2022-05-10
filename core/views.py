@@ -15,6 +15,10 @@ def nosotros(request):
 
 def probando(request):
     return render(request, 'core/probando.html')
+
+def contacto(request):
+    return render(request, 'core/contacto.html')   
+    
    
 
 #carrito compras

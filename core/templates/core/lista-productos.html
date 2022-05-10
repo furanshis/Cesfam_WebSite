@@ -1,162 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> productos | Gc</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/lista-productos.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> productos | Gc</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/lista-productos.css">
 </head>
+
 <body>
-    <!--cabezera nav bar-->
-    <div class="mynav">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand"><img src="img/logo.png" class="img-fluif" width="80px" height="50px" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Carrito de compra</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../Semestral-Proyecto/login.html">Iniciar Sesion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../Semestral-Proyecto/formulario.html">Subir Obra</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
-                  <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
-                  <li><a class="dropdown-item" href="../Semestral-Proyecto/artista.html">Por artista</a></li>
-                </ul>
-                <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
+  <!--cabezera nav bar-->
+  <div class="mynav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"><img src="img/logo.png" class="img-fluif" width="80px" height="50px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrito de compra</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Semestral-Proyecto/login.html">Iniciar Sesion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Semestral-Proyecto/formulario.html">Subir Obra</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="lista-productos.html"> Todos </a></li>
+                <li><a class="dropdown-item" href="../Semestral-Proyecto/categoria.html">Por categoría</a></li>
+                <li><a class="dropdown-item" href="../Semestral-Proyecto/artista.html">Por artista</a></li>
+              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Ingrese su texto" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
+  </div>
+
+
+  <!--cards-->
+  <div class="card-deck">
+    <div class="card">
+      <img src="img/imgcard1.jpg" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <a href="../Semestral-Proyecto/venta-compra1.html">
+          <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        </a>
+        <h6>precio: $100.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+          content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
     </div>
+    <div class="card">
+      <img src="img/imgcard2.jpg" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        <h6>Precio: $500.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/imgcard3.jpg" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        <h6>Precio: $250.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+          This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-deck">
+    <div class="card">
+      <img src="img/imgcard7.png" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        <h6>Precio: $100.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+          content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/imgcard4.png" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        <h6>Precio: $500.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/imgcard9.png" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-warning">Titulo obra de arte</h5>
+        <h6>Precio: $250.000</h6> <br>
+        <h6>ARTISTA</h6>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+          This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
 
-
-      <!--cards-->
-      <div class="card-deck">
-          <div class="card">
-            <img src="img/imgcard1.jpg" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-             <a href="../Semestral-Proyecto/venta-compra1.html"> <h5 class="card-title text-warning">Titulo obra de arte</h5></a>
-              <h6>precio: $100.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This is  a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/imgcard2.jpg" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Titulo obra de arte</h5>
-              <h6>Precio: $500.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/imgcard3.jpg" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Titulo obra de arte</h5>
-              <h6>Precio: $250.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-        <div class="card-deck">
-          <div class="card">
-            <img src="img/imgcard7.png" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Titulo obra de arte</h5>
-              <h6>Precio: $100.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/imgcard4.png" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Titulo obra de arte</h5>
-              <h6>Precio: $500.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/imgcard9.png" class="card-img-top embed-responsive-item" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Titulo obra de arte</h5>
-              <h6>Precio: $250.000</h6> <br>
-              <h6>ARTISTA</h6>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+  <!--footer-->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Grupo zero</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, magnam.</p>
         </div>
 
-        <!--footer-->
-        <footer class="bg-dark text-white pt-5 pb-4">
-          <div class="container text-center text-md-left">
-            <div class="row text-center text-md-left">
-              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Grupo zero</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, magnam.</p>
-              </div>
-  
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Redes sociales</h5>
-                <p>
-                  <a href="https://es-la.facebook.com" class="text-white" style="text-decoration: none;">Facebook</a>
-                </p>
-                <p>
-                  <a href="https://www.instagram.com/?hl=es-la" class="text-white" style="text-decoration: none;">Instagram</a>
-                </p>
-                <p>
-                  <a href="https://twitter.com/?lang=es" class="text-white" style="text-decoration: none;">Twitter</a>
-                </p>
-  
-              </div>
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Visitanos en</h5>
-                <p>
-                  Santiago , Los Copihues #289
-                </p>
-              </div>
-  
-            </div>
-              
-          </div>
-        </footer>
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      
-      
-    
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Redes sociales</h5>
+          <p>
+            <a href="https://es-la.facebook.com" class="text-white" style="text-decoration: none;">Facebook</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/?hl=es-la" class="text-white"
+              style="text-decoration: none;">Instagram</a>
+          </p>
+          <p>
+            <a href="https://twitter.com/?lang=es" class="text-white" style="text-decoration: none;">Twitter</a>
+          </p>
+
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Visitanos en</h5>
+          <p>
+            Santiago , Los Copihues #289
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+
+
 </body>
+
 </html>
