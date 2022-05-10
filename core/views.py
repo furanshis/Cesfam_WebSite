@@ -1,4 +1,7 @@
+from email import message
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+
 
 from core.carrito import Carrito
 from core.models import Remedio
@@ -11,6 +14,33 @@ def login(request):
     return render(request, 'core/login.html')
 
 def contacto(request):
+    if request.method == "POST":
+        nombre = request.POST.get('full-name')
+        correo = request.POST.get('email')
+        telefono = request.POST.get('telefono')
+        subject = request.POST.get('asunto')
+        comentario = request.POST.get('message')
+
+        data= {
+            'nombre' : nombre,
+            'email' : correo,
+            'telefono' : telefono,
+            'asunto' : subject,
+            'message' : comentario
+        }
+        message = '''
+        New message: {}
+
+        From: {}
+        '''.format(data['message'],data['email'])
+        send_mail(data['subject'], message, '', ['matideus74@gmail.com'])
+
+        
+
+        
+        
+
+
     return render(request, 'core/contacto.html')
 
 def nosotros(request):
