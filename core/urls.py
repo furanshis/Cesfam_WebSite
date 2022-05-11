@@ -7,6 +7,7 @@ urlpatterns = [
     path('nosotros/', nosotros, name='nosotros'),
     path('contacto/', contacto, name='contacto'),
 
+
     #carrito
     path('carrito', carrito_compras, name="carrito_compras"),
     path('agregar/<int:remedio_id>/', agregar_remedio, name="agregar_remedio"),
