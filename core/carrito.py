@@ -1,3 +1,4 @@
+from .context_processors import total_carrito
 class Carrito:
     def __init__(self, request):
         self.request = request
@@ -50,3 +51,11 @@ class Carrito:
     def limpiar(self):
         self.session["carrito"] = {}
         self.session.modified = True
+
+    def total_carrito(request):
+        total = 0
+        if request.user.is_authenticated:
+            if "carrito" in request.session.keys():
+                for key, value in request.session["carrito"].items():
+                    total += int(value["precio_acumulado"])
+        return {"total_carrito": total}

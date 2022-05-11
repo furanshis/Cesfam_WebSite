@@ -18,10 +18,10 @@
             <td>{{value.nombre_carrito}}</td>
             <td>{{value.precio_remedio}}</td>
             <td>{{value.precio_acumulado}}
-            <a href="{% url 'agregar_remedio' value.remedio_id %}" class="badge btn btn-dark badge-dark">+</a>
-            <a href="{% url 'eliminar_remedio' value.remedio_id %}" class="badge btn btn-dark badge-dark">-</a>
+            <a href="{% url 'agregar_remedio' value.remedio_id %}">+</a>
+            <a href="{% url 'eliminar_remedio' value.remedio_id %}">-</a>
             </td>
-        </tr>
+          </tr>
         <script src="https://www.paypal.com/sdk/js?client-id=AT-EWWozseJtU18PfRKEC1PBB4ikdw5PSAojVtNupALMC9bz3WiLnMX0S4WY5-MRqBqEenZD9RCLvQIS&currency=USD"></script>
         <div id="paypal-button-container"></div>
 
@@ -88,10 +88,12 @@
             </td>
         </tr>
         {% endif %}
+
         <tr>
-            <th scope="row">Total:</th>
-            <td colspan="2">${{total_carrito}}</td>
+          <th scope="row">Total:</th>
+          <td colspan="2">${{value.precio_acumulado}}</td>
         </tr>
+        
         </tbody>
     </table>
     <hr>

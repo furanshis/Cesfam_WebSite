@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'RestApi.apps.RestapiConfig',
     'bootstrap5',
 
     'rest_framework',
