@@ -1,7 +1,21 @@
 <template>
-  <p>hellos</p>
+  
+  <router-link to="/sobrenosotros" class="button">nosotros</router-link>
 </template>
 
+
+<script>
+export default {
+  data() {
+    return {
+      showMobileMenu: false,
+      cart: {
+        items: []
+      }
+    }
+  },
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
