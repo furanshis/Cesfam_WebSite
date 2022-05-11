@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -44,6 +45,8 @@ class Remedio(models.Model):
     precioRemedio = models.IntegerField(verbose_name="Precio del remedio")
     stockRemedio = models.IntegerField(verbose_name="Stock del remedio")
     cantidadRemedio = models.CharField(max_length=15 ,verbose_name="Cantidad de remedio en gr o mg")
+    imagen = models.ImageField(upload_to="medc", null=True)
+    
 
     def __str__(self):
         return f'{self.nombreRemedio} -> {self.precioRemedio}'
