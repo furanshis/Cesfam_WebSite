@@ -1,9 +1,13 @@
 {% load static %}
+{% load bootstrap5 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <!DOCTYPE html>
 <html >
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
     <title>login | Gc </title>
     
     <link rel="stylesheet" href="{% static 'core/css/login.css' %}">
