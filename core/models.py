@@ -8,18 +8,6 @@ class Usuario(models.Model):
     def __str__(self):
         return self.nombreUsuario
 
-
-class Producto(models.Model):
-    objects = None
-    idProducto = models.IntegerField(primary_key=True, verbose_name="Id del producto")
-    nombreProducto = models.CharField(max_length=50, verbose_name="Nombre del producto")
-    descripcionProducto = models.CharField(max_length=200, verbose_name="Descripción del producto")
-    precioProducto = models.IntegerField(verbose_name="Precio del producto")
-
-    def __str__(self):
-        return f'{self.nombreProducto} -> {self.precioProducto}'
-
-
 class CategoriaRemedio(models.Model):
     idCategoriaRemedio = models.IntegerField(primary_key=True, verbose_name="Id de la categoria del remedio")
     nombreCategoriaRemedio = models.CharField(max_length=50, verbose_name="Nombre de la categoría del producto")

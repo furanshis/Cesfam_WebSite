@@ -4,10 +4,7 @@ from core.carrito import Carrito
 from core.models import Remedio
 
 #rest
-from rest_framework import viewsets
-from rest_framework import generics
-from rest_framework import filters
-from .serializers import *
+
 
 # Create your views here.
 def index(request):
@@ -58,15 +55,4 @@ def total_carrito(request, precio_remedio):
 
 
 
-
 #rest
-class RemedioViewSet(viewsets.ModelViewSet):
-    queryset = Remedio.objects.all().order_by('idRemedio')
-    serializer_class = RemedioSerializer
-
-class MarcaViewSet(viewsets.ModelViewSet):
-    search_fields = ['question_text']
-    filter_backends = (filters.SearchFilter,)
-    queryset = MarcaRemedio.objects.all().order_by('idMarcaRemedio')
-    serializer_class = MarcaSerializer
-

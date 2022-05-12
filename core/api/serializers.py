@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from .models import *
+from core..models import *
 
-class RemedioSerializer(serializers.HyperlinkedModelSerializer):
+class RemedioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Remedio
         fields = ('idRemedio', 'nombreRemedio', 'descripcionRemedio', 'precioRemedio', 'stockRemedio', 'cantidadRemedio', 'imagenRemedio')
 
-class MarcaSerializer(serializers.HyperlinkedModelSerializer):
+class MarcaSerializer(serializers.ModelSerializer):
     class Meta:
         model = MarcaRemedio
         fields = ('idMarcaRemedio', 'nombreMarcaRemedio')
